@@ -1,2 +1,2 @@
 # python-app/app.py
-print("Hello, World naveen!")
+print("Hello, World naveen sample nginx iamge!")
