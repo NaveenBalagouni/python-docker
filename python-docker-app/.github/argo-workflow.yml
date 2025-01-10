@@ -1,0 +1,29 @@
+# .github/workflows/argo-workflow.yml
+
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: docker-build-and-push-
+spec:
+  entrypoint: build-and-push
+  templates:
+  - name: build-and-push
+    container:
+      image: docker:latest
+      command: ["/bin/sh", "-c"]
+      args:
+        - |
+          # Install Docker CLI if not present
+          curl -fsSL https://get.docker.com -o get-docker.sh
+          sh get-docker.sh
+
+          # Log in to Docker
+          echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+
+          # Clone the repo and build the image
+          git clone https://github.com/your-username/python-docker-automation.git
+          cd python-docker-automation
+
+          # Build and push Docker image
+          docker build -t your-dockerhub-username/python-docker-app .
+          docker push your-dockerhub-username/python-docker-app
