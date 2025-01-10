@@ -1,10 +1,8 @@
-# python-app/app.py
-print("Hello, World naveen sample nginx image
-1. create a Github repo - put yaml all files same repo
-2. Put some python Script inside in image {print Hello world}
-3. create a Dockerfile
-4. create a image and pushed to Docker registry
-5. Create a workflow  that automates the above four steps
-6) create webhook es {eventsource}, sensor with workflow from step 5
-create a webhook repo to
-7 make change in changed in python script")
+print("Hello, World naveen sample nginx image")
+print("1. Create a Github repo - put YAML and all files in the same repo")
+print("2. Put a Python script inside an image that prints 'Hello World'")
+print("3. Create a Dockerfile")
+print("4. Create an image and push it to Docker registry")
+print("5. Create a workflow that automates the above four steps")
+print("6. Create a webhook event source, sensor with workflow from step 5")
+print("7. Make changes in the Python script")
