@@ -8,7 +8,7 @@ spec:
     - name: python-app
       container:
         image: naveenbalagouni/python-docker-app  # Ensure this points to the updated image
-        command: ["/bin/sh", "-c", "python-app/app.py"]
+        command: ["/bin/sh", "-c", "python-docker-app/python-app"]
         resources:
           limits:
             memory: "128Mi"
