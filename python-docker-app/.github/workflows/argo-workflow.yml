@@ -1,17 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  name: python-app-workflow  # Specify the name of the workflow explicitly
+  name: python-app-workflow
   namespace: argo
 spec:
   entrypoint: python-app
   templates:
-    - name: python-app  # Template name
+    - name: python-app
       container:
-        image: naveenbalagouni/python-docker-app  # The Docker image in Docker Hub (updated version)
-        command: ["python", "app.py"]  # Command to run the Python application
-        resources:
-          limits:
-            memory: "128Mi"  # Memory limit for the container
-            cpu: "500m"  # CPU limit for the container
-
+        image: naveenbalagouni/python-docker-app
+        command: ["python", "app.py"]  # This should be correct, as long as app.py is in /usr/src/app
