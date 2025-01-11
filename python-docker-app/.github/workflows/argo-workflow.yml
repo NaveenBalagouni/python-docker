@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: python-app-
+  generateName: python-app  # Workflow name prefix
 spec:
   entrypoint: python-app
   templates:
-    - name: python-app
+    - name: python-app  # Template name
       container:
-        image: naveenbalagouni/python-docker-app  # Ensure this points to the updated image
-        command: ["/bin/sh", "-c", "python-app/app.py"]
+        image: naveenbalagouni/python-docker-app  # The Docker image in Docker Hub (updated version)
+        command: ["/bin/sh", "-c", "python app.py"]  # Command to run the Python application
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "128Mi"  # Memory limit for the container
+            cpu: "500m"  # CPU limit for the container
