@@ -4,8 +4,8 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Copy the 'python-app' directory contents into the container
-COPY python-app /usr/src/app
+# Copy the current directory contents into the container
+COPY . /usr/src/app
 
 # Command to run the Python script
 CMD ["python", "app.py"]
