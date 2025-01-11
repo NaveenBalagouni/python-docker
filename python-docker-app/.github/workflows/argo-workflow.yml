@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: python-app
+  generateName: python-app-
 spec:
   entrypoint: python-app
   templates:
