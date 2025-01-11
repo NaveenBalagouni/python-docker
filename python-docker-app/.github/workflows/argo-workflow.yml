@@ -9,8 +9,9 @@ spec:
     - name: python-app  # Template name
       container:
         image: naveenbalagouni/python-docker-app  # The Docker image in Docker Hub (updated version)
-        command: ["/bin/sh", "-c", "python app.py"]  # Command to run the Python application
+        command: ["python", "app.py"]  # Command to run the Python application
         resources:
           limits:
             memory: "128Mi"  # Memory limit for the container
             cpu: "500m"  # CPU limit for the container
+
