@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: python-app  # Workflow name prefi
+  name: python-app-workflow  # Specify the name of the workflow explicitly
   namespace: argo
 spec:
   entrypoint: python-app
