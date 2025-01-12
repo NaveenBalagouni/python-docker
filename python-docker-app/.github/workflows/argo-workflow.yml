@@ -9,4 +9,4 @@ spec:
     - name: python-app
       container:
         image: naveenbalagouni/python-docker-app
-        command: ["python", "app.py"]  # This should be correct, as long as app.py is in /usr/src/app
+        command: ["python", "app.py"]  # This should be correct, as long as app.py is in /usr/src/ap
