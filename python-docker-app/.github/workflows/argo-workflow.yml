@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   name: python-app-workflow
-  namespace: test
+  namespace: argo
 spec:
   entrypoint: python-app
   templates:
