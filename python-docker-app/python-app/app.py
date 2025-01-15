@@ -1,4 +1,4 @@
-print("Hello, World,  NAVEEN SAMPLE sample nginx image")
+print("Hello, World,  NAVEEN  sample nginx image")
 print("1. Create a Github repo - put YAML and all files in the same repo" )
 print("2. Put a Python script inside an image that prints 'Hello World'")
 print("3. Create a Dockerfile" )
